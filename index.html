@@ -1,0 +1,59 @@
+<html ng-app="sampleApp">
+    <head>    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
+    <script src="js/angular-ui-router.min.js"></script>
+    <script>
+        var myApp = angular.module('myApp', ['ui.router']);
+        // For Component users, it should look like this:
+        // var myApp = angular.module('myApp', [require('angular-ui-router')]);
+    </script></head>
+  <body ng-controller="SampleCtrl">
+      <div ui-view></div>
+      <!-- We'll also add some navigation: -->
+        <!-- partials/state1.html -->
+<h1>State 1</h1>
+<hr/>
+<a ui-sref="state1.list">Show List</a>
+<div ui-view>
+       <ul>
+        <li ng-repeat="message in messages">{{ message.text }}
+            <!-- edit a message -->
+        <input ng-model="message.text" ng-change="messages.$save(message)" />
+        <!-- delete a message -->
+        <button ng-click="messages.$remove(message)">Delete Message</button>
+        </li>
+    </ul>
+      </div>
+        
+        <!-- partials/state2.html -->
+<h1>State 2</h1>
+<hr/>
+<a ui-sref="state2.list">Show List</a>
+<div ui-view><ul>
+        <li ng-repeat="message in messages">{{ message.text }}
+            <!-- edit a message -->
+        <input ng-model="message.text" ng-change="messages.$save(message)" />
+        <!-- delete a message -->
+        <button ng-click="messages.$remove(message)">Delete Message</button>
+        </li>
+    </ul></div>
+     
+      <!-- push a new message onto the array -->
+    <form ng-submit="addMessage()">
+      <input ng-model="newMessageText" />
+      <button type="submit">Add Message</button>
+    </form>
+    <!-- anything typed in here is magically saved to our Firebase database! -->
+    <input type="text" ng-model="data.text"/>
+    <!-- all changes from our Firebase database magically appear here! -->
+    <h1>You said: {{ data.text }}</h1>
+    
+      <!-- Angular -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+
+<!-- AngularFire -->
+<script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
+    
+  </body>
+</html>
+
+

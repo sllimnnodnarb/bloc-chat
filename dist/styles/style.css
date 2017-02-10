@@ -1,0 +1,123 @@
+.body {
+    height: auto;
+    width: auto;
+    background-image: url("https://s-media-cache-ak0.pinimg.com/originals/c2/ad/98/c2ad981c58932d77d1b50b09b0c0bebe.jpg");
+    background-color: white;
+    opacity: .5;
+    border: 50px, solid, white;
+}
+
+.navbar { 
+    float: top;
+    align: center;
+    width: auto;
+    background-color: #000080;
+    padding: 5px, 5px, 5px, 5px;
+    margin: 10px;
+}
+
+.navbar .links-container {
+    border-top: none;
+    border-bottom: 3px, solid, white;
+    float: right;
+    align: right;
+    width: 30%
+    height: auto;
+    padding: 10px;
+}
+
+.navbar .links-container .navbar-link {
+    float: top;
+    background: navy;
+    color: white;
+    
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: 'Electrolize', sans-serif;
+    font-weight: bolder;
+    font-size: 18px;
+}   
+
+.navbar .links-container .navbar-link:hover {
+    color: navy;
+    background: white;
+}
+
+.main-control {
+    position: fixed;
+    margin-left: 15px;
+    width: 35%;
+    height: 1000px;
+    float: top;
+    padding-left: 20px;
+}
+
+.main-control .friends {
+    border-bottom: solid;
+    border-color: navy;
+    padding-bottom: 1px;
+    font-size: 30px;  
+    font-style: italic;
+    font-family: 'Electrolize', sans-serif;
+    font-weight: bolder;
+    text-shadow: 2px 3px #bdc1be;
+}
+
+.main-control .rooms {
+    border-bottom: solid;
+    border-color: navy;
+    padding-bottom: 1px;
+    font-size: 30px;  
+    font-style: italic;
+    font-family: 'Electrolize', sans-serif;
+    font-weight: bolder;
+    text-shadow: 2px 3px #bdc1be;
+}
+
+.main-control .chat {
+    border-bottom: solid;
+    border-color: navy;
+    padding-bottom: 1px;
+    font-size: 30px;  
+    font-style: italic;
+    font-family: 'Electrolize', sans-serif;
+    font-weight: bolder;
+    text-shadow: 2px 3px #bdc1be;
+}
+
+.button {
+    background-color: white;
+    font-size: 18px;
+    font-family: 'Electrolize', sans-serif;
+    color: navy;
+    border: none;
+}
+
+.button:hover {
+    background-color: navy;
+    color: white;
+    border: none;
+}
+
+.main-area .message-history {
+    float: right;
+    display: inline-block;
+    width: 50%;
+    height: 500px;
+    margin-right: 10px;
+    font-size: 18px;
+    font-color: #000080;
+    font-style: italic;
+    font-family: 'Electrolize', sans-serif;
+    border-left-style: inset;
+    border-left-color: navy;
+    border-left-width: medium;
+}
+
+.message-text {
+    align-content: center:
+    padding: 20px;
+    margin-left: 20px;  
+}

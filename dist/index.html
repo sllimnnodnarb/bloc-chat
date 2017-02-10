@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html ng-app="BlocChat">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Bloc Chat</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Coda+Caption:800|Electrolize|Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/style.css">
+   
+</head>
+<body ng-controller="roomsCtrl">
+    <nav class="navbar">
+        <a ui-sref="home" class="logo">
+            <img src="/assets/images/bloc-chat-logo.png" alt="bloc chat logo">
+        </a>
+        <div class="links-container">
+            <a ui-sref="sign-in" class="navbar-link sign-in"> Sign-in </a>
+            <a ui-sref="settings" class="navbar-link settings"> Settings </a>
+        </div>
+    </nav>
+        <div class="main-control">
+            <div class="friends">Friends</div><br>
+                    <form ng-click="messageFriend()">
+                        <input ng-model="newMessageText" placeholder="Friend's name here" />
+                        <button class="button" type="submit">Find Friend</button><br>
+                    </form><br>
+            <div class="rooms">Rooms</div><br>
+                    <form ng-click="addRoom()">
+                        <input ng-model="newRoomName" placeholder="Enter room name"/>
+                        <button class="button" type="submit">Create Room</button>
+                    </form><br>
+            <div class="chat">Chat</div><br>
+                <ul class="chat-list"></ul>
+                    <form ng-click="addMessage()">
+                        <input ng-model="newMessageText" placeholder="Your message here" />
+                        <button class="button" type="submit">Send Message</button>
+                    </form><br>
+            
+                <div ng-repeat="message in messages">
+                <!-- edit a message -->
+                </div>
+            
+        </div>
+        <div class="main-area">
+            <div class="message-history">
+                <div class="message-text">Current Activity:</div>
+            </div>
+        </div>
+    <ui-view></ui-view>
+
+    <!-- push a new message onto the array -->
+
+    <script src="https://www.gstatic.com/firebasejs/3.6.8/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCZBQ3b3w_64JAygEV9Z2MRKhLnJwsqbJc",
+            authDomain: "project-2091c.firebaseapp.com",
+            databaseURL: "https://project-2091c.firebaseio.com",
+            storageBucket: " ",
+            messagingSenderId: "510940030893"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+    <script src="/scripts/controllers/homeCtrl.js"></script>
+    <script src="/scripts/controllers/messageCtrl.js"></script>
+    <script src="/scripts/controllers/roomsCtrl.js"></script>
+    <script src="/scripts/app.js"></script>
+    <script src="/scripts/rooms.js"></script>
+    
+</body>
+</html>

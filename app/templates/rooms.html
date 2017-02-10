@@ -1,0 +1,21 @@
+<a ui-sref="rooms">Room</a> 
+<h1 class="rooms-h1">Bloc Chat Rooms</h1>
+<h2 class="rooms-h2">Jump in!  The water has a proper PH balance...</h2>
+
+<ul class="list-container">
+    <li class="list-item">All About Music</li>
+    <li class="list-item">Coding n' Stuff</li>
+    <li class="list-item">Meme Sharing</li>
+    <li class="list-item">Politics Mosh Pit</li>
+    <li class="list-item">Sports</li>
+    <li class="list-item">Jibberish</li>
+    <li class="list-item" ng-repeat="room in rooms">{{.rooms }}</li>
+</ul>
+
+<!-- push a new room onto the array -->
+<div ></div>
+<form ng-submit="addRoom()" class="add-room-box" >
+    <input placeholder="Your room name here" class="input-box"/>
+    <button type="submit" class="add-room-button">Create Room</button>
+</form>
+</div>

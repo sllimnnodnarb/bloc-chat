@@ -17,11 +17,14 @@
             <a ui-sref="rooms"  class="navbar-link">Rooms</a>
         </div>
     </nav>
-    
-    
     <ui-view></ui-view>
 
-    <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
+    <!-- Angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <!-- AngularFire -->
+    <script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>    
+    <!--Firebase-->
+    <script src="https://www.gstatic.com/firebasejs/3.6.8/firebase.js"></script> 
     <script>
       // Initialize Firebase
       var config = {
@@ -33,14 +36,6 @@
       };
       firebase.initializeApp(config);
     </script>
-    
-    
-    <!-- Angular -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-    <!-- AngularFire -->
-    <script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
-        <!--Firebase-->
-    <script src="https://www.gstatic.com/firebasejs/3.6.8/firebase.js"></script> 
     <!-- UI Router -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
     <!-- Bootstrap -->
@@ -49,7 +44,9 @@
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <!--local pages-->
     <script src="/scripts/app.js"></script>
-    <script src="/scripts/controllers/RoomCtrl.js"></script>
     <script src="/scripts/services/Room.js"></script>
+    <script src="/scripts/controllers/RoomCtrl.js"></script>
+    <script src="/scripts/controllers/HomeCtrl.js"></script>
+    
 </body>
 </html>

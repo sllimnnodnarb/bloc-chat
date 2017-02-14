@@ -1,6 +1,6 @@
 (function() {
-    function HomeCtrl() {
-        prompt("Welcome to Bloc Chat!"<br>"Enter your name.");
+    function HomeCtrl(Room) {
+        this.title = "this title"
     };
         
     

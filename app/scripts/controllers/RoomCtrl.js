@@ -1,8 +1,10 @@
-(function(Room) {
-    function RoomCtrl($firebaseObject, $firebaseref) {
-        this.object = $firebaseObject($firebaseRef.object);
-        return this.object
-    }
+(function() {
+    function RoomCtrl(Room) {
+        this.rooms = Room.all; 
+        this.test = "testtetett";
+//        this.getRooms = rooms;
+//        return rooms;
+    };
     
     angular
         .module('blocChat')

@@ -1,5 +1,6 @@
 (function() {
     function config($stateProvider, $locationProvider) {
+        
         $locationProvider
             .html5Mode({
                 enabled: true,
@@ -8,7 +9,7 @@
         
         $stateProvider     
             .state('home', {
-                url: '/home',
+                url: '/',
                 controller: 'HomeCtrl as home',
                 templateUrl: '/templates/home.html'
             })

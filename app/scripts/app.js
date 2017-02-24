@@ -17,7 +17,18 @@
             .state('rooms', {
                 url: '/rooms',
                 controller: 'RoomCtrl as rooms',
-                templateUrl: '/templates/rooms.html',
+                templateUrl: '/templates/rooms.html'
+             })
+        
+            .state('modal', {
+                url: '/modal',
+                controller: 'ModalCtrl as modal',
+                templateUrl: '/templates/modal.html',
+                bindings: {
+                    resolve: '<',
+                    close: '&',
+                    dismiss: '&'
+                }
              });
     
     }

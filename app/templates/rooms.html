@@ -1,10 +1,13 @@
 <h1 class="rooms-h1">Bloc Chat Rooms</h1>
-<h2 class="rooms-h2">Jump in!  The water has a proper PH balance...</h2>
-
+<h2 class="rooms-h2">By all means, chat like a professional.</h2>
 <div class="activity-box"> 
     <ul>
-        <li class="list-item" ng-repeat="room in rooms.rooms"><br><a ui-sref="coding">{{ room.name }}</a><br></li>
+        <li class="list-item" ng-repeat="room in rooms.rooms"><br>{{ room.name }}<br></li>
     </ul>
 </div>
-    
-<p></p>
+<section>
+    <div class="add-room">
+        <a class = "room-btn" ng-click="open()">Add New Room</a>
+    </div>
+</section>
+

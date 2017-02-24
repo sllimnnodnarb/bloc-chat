@@ -60,8 +60,26 @@ body {
     background-color: navy;
     color: white;
 }
+
+.hero-content .hero-title .link {
+    font-family: 'Electrolize', sans-serif;
+    font-size: 4rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    text-shadow: 4px 4px 4px grey;
+    color: navy;
+    text-decoration: none;
+}
+
+.hero-content .hero-title .link:hover {
+    color: white;
+    background-color: navy;
+}
+
 .navbar {
     position: relative;
+    float: top;
     padding: 0.5rem;
     background-color: navy;
     z-index: 1;
@@ -71,9 +89,10 @@ body {
 .navbar .links-container {
     display: table;
     position: absolute;
+    float: right;
     top: 0;
     right: 0;
-    height: 50px;
+    height: 5rem;
     color: white;
     text-decoration: none;
 }
@@ -81,7 +100,6 @@ body {
 .links-container .navbar-link {
     display: table-cell;
     position: relative;
-    height: 50px;
     padding-left: 1rem;
     padding-right: 1rem;
     vertical-align: middle;
@@ -93,16 +111,15 @@ body {
     font-family: 'Electrolize', sans-serif;
     text-decoration: none;
     cursor: pointer;
+   
 }
 
 .links-container .navbar-link:hover {
-    color: navy;
-    background: white;
+    font-size: 1rem;
 }
 
 .links-container .navbar-link:active {
-    color: white;
-    background-color: navy;
+    font-style: italic;
 }
 
 .rooms-h1 {
@@ -135,7 +152,7 @@ body {
     font-family: 'Electrolize', sans-serif;
     width: 100%;
     padding: .5rem;
-    margin-bottom: 5rem;
+    margin-bottom: 1rem;
     opacity: .95;
     float: top;
     border-top-style: solid;
@@ -157,35 +174,20 @@ ul {
     float: left;
     list-style-type: none;
     width: 35%;
-    height: 100%;
-    margin-bottom: 2rem;
-    padding: 2rem;
+    height: 80%;
+    margin-bottom: 1rem;
+    padding: 1rem;
     background-color: white;
     opacity: .95;
     text-shadow: 
 }
 
-.list-container {
-    float: left;
-    background-color: white;
-    top: 0px;
-    left: 0px;
-    height: 100%;
-    min-height: 100%;
-    width: 35%;
-    letter-spacing: 0.1rem;
-    text-shadow: 1px 1px 0px rgb(58,23,63);
-    padding-top: 9px;
-}
-
-
-
 .activity-box {
     background-size:100%;
     postion: relative;
     float: left;
-    width: 200px;
-    min-width: 200px;
+    width: 250px;
+    min-width: 250px;
     height; 50%;
     background-color: white;
     border-right-color: navy;
@@ -195,12 +197,11 @@ ul {
 }
 
 .activity-box .list-item {
-    postition: relative;
+    position: relative;
     height: 100%;
-    width: 8rem;
-    padding-left: 1.0rem;
-    padding-bottom: 1.5rem;
-    margin-bottom: 1.5rem;
+    width: 11rem;
+    text-align: center;
+    padding-bottom: 1rem;
     background-color: white;
     opacity: .95;
     color: navy;
@@ -216,6 +217,215 @@ ul {
     font-family: 'Electrolize', sans-serif;
 }
 
+.activity-box .add-room {
+    background-color: navy;
+    padding: 1rem;
+    opacity: .95;
+    background-size:100%;
+    postion: relative;
+    float: left;
+    width: 250px;
+    min-width: 250px;
+    height; 100px; 
+}
+
+.add-room .room-btn {
+    position: absolute;
+    width: 15rem;
+    text-align: center;
+    padding: .5rem;
+    background-color: navy;
+    opacity: .95;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: 'Electrolize', sans-serif;
+    text-decoration: none;
+    border-color: navy;
+    border-width: 10px;
+    border-style: solid;
+    border-left: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+.add-room .room-btn:hover {
+    background: white;
+    color: navy;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.add-room .room-btn:active {
+    background: navy;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    font-style: italic;
+}
+
+
+.modal {
+    position: fixed;
+    width: 80%;
+    min-width: 80%;
+    height:80%;
+    min-height: 80%;
+    margin:10%;
+    padding: 1%;
+    background-color: navy;
+    opacity: .95;
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: 0.05rem;
+    font-weight: 400;
+    color: white;
+    text-transform: none;
+    font-family: 'Electrolize', sans-serif;
+}
+
+.modal-backdrop {
+    position: fixed;
+    width: 100%;
+    min-width: 100%;
+    height: 100%;
+    min-height: 100%;
+    background-color: black;
+    opacity: .7;
+    padding: 1%;
+}
+
+.modal-dialogue {
+    position: fixed;
+    background: white;
+    width: 100%;
+    min-width: 100%;
+    height: 100%;
+    min-height: 100%;
+    border-color: white;
+    border-width: thick;
+    padding: 2.5%;
+    margin: 2.5%
+}
+
+.modal .ng-scope {
+    position: absolute;
+    margin: 8%;
+    background-color: white;
+    float: top;
+    width: 80%;
+    min-width:80%;
+    height: 80%;
+    min-height: 80%;
+    border-color: white;
+    border-width: thick;
+}
+
+
+
+.modal-h1 {
+    position: relative;
+    text-align: relative;
+    font-size: 3rem;
+    letter-spacing: 0.05rem;
+    font-weight: 600;
+    color: navy;
+    text-transform: none;
+    font-family: 'Electrolize', sans-serif;
+    border-bottom: 3px;
+    border-bottom: navy;
+    border-bottom: solid;
+    margin: 2%;
+    padding-top: 10%;
+}
+
+.modal-input-bar {
+    color: navy;
+    width: 80%;
+    font-size: 1rem;
+}
+
+.modal .btn1 {
+    position: relative;
+    float: left;
+    text-align: relative;
+    font-size: 1rem;
+    letter-spacing: 0.05rem;
+    font-weight: 400;
+    color: navy;
+    text-transform: none;
+    font-family: 'Electrolize', sans-serif;
+    color: white;
+    background-color: navy;
+    border: solid;
+    border-color: navy;
+    border-width: thick;
+    padding: 5px;
+    width: 35%;
+    min-width: 35%;
+    height: 15%;
+    margin-left: 10%;
+    margin-top: 5%;
+    text-decoration: none;
+}
+
+.modal .btn2 {
+    position: relative;
+    text-align: relative;
+    text-decoration: none;
+    float: right;
+    font-size: 1rem;
+    letter-spacing: 0.05rem;
+    font-weight: 400;
+    color: navy;
+    text-transform: none;
+    font-family: 'Electrolize', sans-serif;
+    color: white;
+    background-color: navy;
+    border: solid;
+    border-color: navy;
+    border-width: thick;
+    padding: 5px;
+    width: 35%;
+    min-width: 35%;
+    height: 15%;
+    margin-top: 5%;
+    margin-right:11%;
+}
+
+.modal .btn1:hover {
+    color: navy;
+    background-color: white; 
+    border: solid;
+    border-color: navy;
+    border-width: thick;
+    cursor: pointer;
+}
+
+.modal .btn1:active {
+    border: 3px solid white;
+    font-style: italic;
+    border: solid;
+    border-color: navy;
+    border-width: thick;
+}
+
+.modal .btn2:hover {
+    color: navy;
+    background-color: white; 
+    border: solid;
+    border-color: navy;
+    border-width: thick;
+    cursor: pointer;
+}
+.modal .btn2:active {
+    border: 3px solid white;
+    font-style: italic;
+    border: solid;
+    border-color: navy;
+    border-width: thick;
+}
 
 /* Medium and small screen (640px) */
 @media (min-width: 640px) {

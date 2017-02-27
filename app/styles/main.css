@@ -135,10 +135,10 @@ body {
     text-decoration: none;
     width: 100%;
     padding: 1.25rem;
-    margin-bottom: -1.25rem;
+    margin-bottom: -1rem;
+    margin-top: 1rem;
     opacity: .95;
-    
-
+    float: top;
 }
 
 .rooms-h2 {
@@ -151,8 +151,9 @@ body {
     text-transform: none;
     font-family: 'Electrolize', sans-serif;
     width: 100%;
+    height: 3rem;
     padding: .5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0rem;
     opacity: .95;
     float: top;
     border-top-style: solid;
@@ -174,7 +175,7 @@ ul {
     float: left;
     list-style-type: none;
     width: 35%;
-    height: 80%;
+    height: 100%;
     margin-bottom: 1rem;
     padding: 1rem;
     background-color: white;
@@ -188,7 +189,7 @@ ul {
     float: left;
     width: 250px;
     min-width: 250px;
-    height; 50%;
+    height; 100%;
     background-color: white;
     border-right-color: navy;
     border-right-width: 10px;
@@ -207,6 +208,10 @@ ul {
     color: navy;
     font-size: 1.5rem;
     font-family: 'Electrolize', sans-serif;
+}
+
+.activity-box .list-item:active {
+    font-style: italic;
 }
 
 .activity-box .list-item:hover {
@@ -231,13 +236,13 @@ ul {
 
 .add-room .room-btn {
     position: absolute;
-    width: 15rem;
+    width: 8rem;
     text-align: center;
     padding: .5rem;
     background-color: navy;
     opacity: .95;
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 600;
     font-family: 'Electrolize', sans-serif;
     text-decoration: none;
@@ -444,10 +449,63 @@ ul {
     .column.fourth { width: 25%; }
     .column.flow-opposite { float: right; }
 }
-
-
-
 /* Large screens (1024px) */
 @media (min-width: 1024px) {
     html { font-size: 120%; }
+}
+
+.message-container {
+    position: absolute;
+    min-height: 600px;  
+    background-color: white;
+    width: 62%;
+    align: left;
+    height: 100%;
+    opacity: .95;
+    margin-left: 250px;;
+}
+
+.message-container .chat-title {
+    margin-top: 6rem;
+    margin-left: 8rem;
+    margin-bottom: 2rem;
+    position: absolute;
+    float: left;
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: 0.05rem;
+    font-weight: 400;
+    color: navy;
+    text-transform: none;
+    font-family: 'Electrolize', sans-serif;
+}
+
+.message-list {
+    position: relative;
+    width: 100%;
+    border-bottom-width: thin;
+    padding: 1rem;
+    border-bottom-color: black;
+}
+
+.message-place {
+    position: absolute;
+    margin-top: 7rem;
+}
+.message-place .messages {
+    position: relative;
+    padding: 1rem;
+    float: left;
+    text-align: center;
+    font-size: rem;
+    letter-spacing: 0.05rem;
+    font-weight: 400;
+    color: navy;
+    width: 100%;
+    border-bottom-color: black;
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+    text-transform: none;
+    font-family: 'Electrolize', sans-serif;
+    text-align: left;
 }

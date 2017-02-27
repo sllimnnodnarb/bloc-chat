@@ -5,6 +5,8 @@
         $scope.roomName= "";
         $scope.roomArray = $firebaseArray(ref);
         
+        
+        
         $scope.create = function() {
             roomArray.$add({ name: $scope.roomName }).then(function(ref) {
                 var id = ref.key;

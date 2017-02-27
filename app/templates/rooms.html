@@ -2,12 +2,25 @@
 <h2 class="rooms-h2">By all means, chat like a professional.</h2>
 <div class="activity-box"> 
     <ul>
-        <li class="list-item" ng-repeat="room in rooms.rooms"><br>{{ room.name }}<br></li>
+        <li class="list-item" ng-repeat="room in rooms.rooms">
+            <a ng-click="rooms.setActiveChatRoom(room)"><br>{{ room.name }}<br></a>
+        </li><br><br><br><br><br><br><br><br><br><br><br>
     </ul>
 </div>
-<section>
+<div class="message-container">
     <div class="add-room">
-        <a class = "room-btn" ng-click="open()">Add New Room</a>
+        <a class = "room-btn" ng-click="rooms.open()">Add New Room</a>
     </div>
-</section>
+    <h1 class="chat-title">{{ rooms.activeRoom.name }}</h1><br>
+    <section class="message-place" ng-show="rooms.activeRoom.name != null">
+        
+        <ul class="message-list">
+            <li class="messages" ng-repeat="message in rooms.messages">Message: {{ message.name }}<br></li>
+        </ul>
+        <div class="message-field">
+            <input type="text" name="input" placeholder="Type your message here" class="message-box" ng-model="newMessage.content" style="width:400px;">
+            <button class="btn-new-message" type="button" ng-click="rooms.sendNewMessages()">Send Your Message</button>
+        </div>
+    </section>
+</div>
 

@@ -23,16 +23,11 @@
                 url: '/modal',
                 controller: 'ModalCtrl as modal',
                 templateUrl: '/templates/modal.html',
-                bindings: {
-                    resolve: '<',
-                    close: '&',
-                    dismiss: '&'
-                }
              });
     
     }
         
     angular
-            .module('blocChat', ['ui.router', 'firebase','ui.bootstrap'])
-            .config(config);
+        .module('blocChat', ['ui.router', 'firebase', 'ui.bootstrap', 'ngCookies'])
+        .config(config)
 })();

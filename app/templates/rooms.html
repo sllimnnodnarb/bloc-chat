@@ -4,7 +4,7 @@
     <ul>
         <li class="list-item" ng-repeat="room in rooms.rooms">
             <a ng-click="rooms.setActiveChatRoom(room)"><br>{{ room.name }}<br></a>
-        </li><br><br><br><br><br><br><br><br><br><br><br>
+        </li>
     </ul>
 </div>
 <div class="message-container">
@@ -15,11 +15,11 @@
     <section class="message-place" ng-show="rooms.activeRoom.name != null">
         
         <ul class="message-list">
-            <li class="messages" ng-repeat="message in rooms.messages">Message: {{ message.name }}<br></li>
+            <li class="messages" ng-repeat="message in rooms.messages">{{ message.username }} said:<br> "{{ message.message }}"</li>
         </ul>
         <div class="message-field">
-            <input type="text" name="input" placeholder="Type your message here" class="message-box" ng-model="newMessage.content" style="width:400px;">
-            <button class="btn-new-message" type="button" ng-click="rooms.sendNewMessages()">Send Your Message</button>
+            <input type="text" name="input" placeholder="Type message here" class="message-box" ng-model="content" ng-submit="content"><br>
+            <a class="room-btn" ng-click="rooms.send(content)">Send Message</a>
         </div>
     </section>
 </div>

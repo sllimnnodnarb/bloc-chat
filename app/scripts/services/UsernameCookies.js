@@ -10,7 +10,7 @@
                 backdrop: 'static'
             });
         }
-    }
+    };
     
     angular
         .module('blocChat')

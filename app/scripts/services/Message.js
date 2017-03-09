@@ -1,15 +1,16 @@
 (function() {
-    function Message($firebaseArray) {
- 
-        return {
-            getByRoomId: function (roomId) {
-        // Filter the messages by their room ID.
-                return $firebaseArray(firebase.database().ref().child("messages").orderByChild("roomId").equalTo(roomId));
-            }
-        };
+    function Message($firebaseArray, $cookies) {
+        var messageRef = firebase.database().ref().child("messages");  
+        var messageReference = firebase.database().ref().child("messages").orderByChild("roomId");
+            
+        Message.getByRoomId = function(roomId) {              
+            return $firebaseArray(messageReference.equalTo(roomId));
+        }
+      
+        return Message;
     };
 
     angular
         .module('blocChat')
-        .factory('Message', ['$firebaseArray', Message]);
+        .factory('Message', ['$firebaseArray','$cookies', 'Room', Message]);
 })();

@@ -31,6 +31,7 @@ body {
     width: 80%;
     height: auto;
     background-color: white;
+    opacity: .95;
     vertical-align: middle;
     text-align: center;
     padding: 5%;
@@ -41,6 +42,7 @@ body {
 .hero-content .hero-title {
     position: relative;
     width: 80%;
+    opacity: 1;
     padding: 5%;
     margin: 8%;
     font-family: 'Electrolize', sans-serif;
@@ -58,6 +60,7 @@ body {
 .hero-content .hero-title:hover {
     cursor: pointer;
     background-color: navy;
+    opacity: 1;
     color: white;
 }
 
@@ -453,12 +456,70 @@ ul {
 @media (min-width: 1024px) {
     html { font-size: 120%; }
 }
+.message-field .message-box {
+    postition: relative;
+    float: left;
+    height: 3rem;
+    width: 100%;
+    border: navy;
+    border-style: solid;
+    border-width: 10px;
+    font-color: black;
+    font-size: 1rem;
+    letter-spacing: 0.05rem;
+    font-weight: 400;
+    text-transform: none;
+    font-family: 'Electrolize', sans-serif;
+}
+
+.message-field .room-btn { 
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    float: left;
+    font-size: 1rem;
+    letter-spacing: 0.05rem;
+    font-weight: 400;
+    color: navy;
+    text-transform: none;
+    font-family: 'Electrolize', sans-serif;
+    color: white;
+    background-color: navy;
+    border: solid;
+    border-color: navy;
+    border-width: 10px;
+    padding: 5px;
+    width: 50%;
+    min-width: 35%;
+    height: 15%;
+    margin-top: 0%;
+    margin-right:11%;
+    margin-bottom: 10%;
+}
+
+.message-field .room-btn:hover {
+    color: navy;
+    background-color: white; 
+    border: solid;
+    border-color: navy;
+    border-width: 10px;
+    cursor: pointer;
+}
+
+.message-field .room-btn:active {
+    border: 3px solid white;
+    font-style: italic;
+    border: solid;
+    border-color: navy;
+    border-width: 10px;
+}
+
 
 .message-container {
     position: absolute;
     min-height: 600px;  
     background-color: white;
-    width: 62%;
+    width: 100%;
     align: left;
     height: 100%;
     opacity: .95;
@@ -468,7 +529,7 @@ ul {
 .message-container .chat-title {
     margin-top: 6rem;
     margin-left: 8rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     position: absolute;
     float: left;
     text-align: center;
@@ -478,6 +539,10 @@ ul {
     color: navy;
     text-transform: none;
     font-family: 'Electrolize', sans-serif;
+}
+
+.message-field {
+    margin-top: inherit;
 }
 
 .message-list {

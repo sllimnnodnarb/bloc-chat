@@ -8,7 +8,8 @@
         $scope.username = "";
         
         $scope.create = function() {
-            roomArray.$add({ name: $scope.roomName }).then(function(ref) {
+            roomArray.$add({ 
+                name: $scope.roomName }).then(function(ref) {
                 var id = ref.key;
                 console.log("added record with id " + id);
                 roomArray.$indexFor(id);
@@ -16,7 +17,6 @@
             })
             
             $uibModalInstance.close();
-
         };
         
         $scope.cancel = function() {
